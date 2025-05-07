@@ -16,7 +16,8 @@ def arco(direc, radio, ang):
 def linea(direc, longitud):
     t.seth(direc)
     t.forward(longitud)
-    
+
+# Dibujo existente...
 t.fillcolor("Red")
 go(0.66, -231.64)
 t.begin_fill()
@@ -196,5 +197,33 @@ t.pencolor("Black")
 go(-75.17, 0.57)
 arco(110.18, 7.93, 35.18)
 
+# Añadir texto multilinea desplazado a la derecha, con líneas centradas
+start_x = 150
+start_y = 40
+line_spacing = 25
+t.penup()
+t.color("Black")
+t.goto(start_x, start_y)
+t.pendown()
+t.write("Pamto también", align="center", font=("Comic Sans MS", 20, "bold"))
+
+t.penup()
+t.goto(start_x, start_y - line_spacing)
+t.pendown()
+t.write("te desea un", align="center", font=("Comic Sans MS", 20, "bold"))
+
+t.penup()
+t.goto(start_x, start_y - 2*line_spacing)
+t.pendown()
+t.write("hermoso", align="center", font=("Comic Sans MS", 20, "bold"))
+
+t.penup()
+t.goto(start_x, start_y - 3*line_spacing)
+t.pendown()
+t.write("cumpleaños <3", align="center", font=("Comic Sans MS", 20, "bold"))
+
 t.hideturtle()
 turtle.done()
+
+
+
